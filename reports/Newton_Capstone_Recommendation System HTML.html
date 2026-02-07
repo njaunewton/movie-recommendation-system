@@ -7511,17 +7511,6 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25ea2536-6ea9-4c42-9213-8fc85d337b91">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="CAPSTONE-PROJECT"><strong>CAPSTONE PROJECT</strong><a class="anchor-link" href="#CAPSTONE-PROJECT">¶</a></h1>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=115b12b7-2eff-4f10-b5e5-53cf51ce9432">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7529,6 +7518,17 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="A-Content-Based-Movie-Recommendation-System-Using-MovieLens-Small-Data-(GroupLens)"><em><strong>A Content-Based Movie Recommendation System Using MovieLens Small Data (GroupLens)</strong></em><a class="anchor-link" href="#A-Content-Based-Movie-Recommendation-System-Using-MovieLens-Small-Data-(GroupLens)">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25ea2536-6ea9-4c42-9213-8fc85d337b91">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="CAPSTONE-PROJECT"><strong>CAPSTONE PROJECT</strong><a class="anchor-link" href="#CAPSTONE-PROJECT">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7542,6 +7542,10 @@ a.anchor-link {
 <h1 id="Executive-Summary"><strong>Executive Summary</strong><a class="anchor-link" href="#Executive-Summary">¶</a></h1><p>This project develops and evaluates a movie recommendation system using the MovieLens Small dataset, with the goal of generating personalized movie recommendations based on historical user rating behavior. Exploratory data analysis revealed a highly sparse user–item interaction matrix and uneven user activity, which informed preprocessing decisions and justified the use of collaborative filtering as the primary recommendation approach.</p>
 <p>The system was built by constructing a user–item rating matrix and applying cosine similarity to identify movies with similar rating patterns. Qualitative evaluation showed that the system consistently produced coherent and relevant recommendations for both popular and niche movies, indicating that meaningful user preference patterns were successfully captured.</p>
 <p>To demonstrate practical applicability, the recommendation logic was deployed through a command-line interface that allows users to input a movie title and receive real-time recommendations. While the system is limited by common collaborative filtering challenges such as cold-start and data sparsity, it provides a complete end-to-end recommendation pipeline and a strong foundation for future enhancements.</p>
+<p>This project is fully reproducible and publicly available on GitHub:<br/>
+<strong>Repository:</strong> <a href="https://github.com/njaunewton/movie-recommendation-system/tree/main">https://github.com/njaunewton/movie-recommendation-system/tree/main</a></p>
+<p>The recommendation system was developed using the MovieLens Latest Small Dataset, provided by GroupLens Research at the University of Minnesota:<br/>
+<strong>Dataset Source:</strong> <a href="https://files.grouplens.org/datasets/movielens/ml-latest-small.zip">https://files.grouplens.org/datasets/movielens/ml-latest-small.zip</a></p>
 </div>
 </div>
 </div>
@@ -7564,8 +7568,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="2.-DATASET-DESCRIPTION"><strong>2. DATASET DESCRIPTION</strong><a class="anchor-link" href="#2.-DATASET-DESCRIPTION">¶</a></h1><p>The MovieLens Small dataset was obtained from the GroupLens research group (<a href="https://files.grouplens.org/datasets/movielens/ml-latest-small.zip">https://files.grouplens.org/datasets/movielens/ml-latest-small.zip</a><br/>
-). It contains user ratings and metadata for movies collected from a movie recommendation platform.</p>
+<h1 id="2.-DATASET-DESCRIPTION"><strong>2. DATASET DESCRIPTION</strong><a class="anchor-link" href="#2.-DATASET-DESCRIPTION">¶</a></h1><p>The MovieLens Small dataset was obtained from the GroupLens research group. It contains user ratings and metadata for movies collected from a movie recommendation platform.</p>
 <p>Three files were used in this project:
 - movies.csv, which contains movie titles and genres
 - ratings.csv, which records user ratings for movies
@@ -7579,25 +7582,30 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
-<span class="c1">#Dataset storage </span>
+<span class="c1"># Dataset storage </span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">print_tree</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
-    <span class="n">contents</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">is_file</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
-    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">contents</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'.'</span><span class="p">):</span>
-            <span class="k">continue</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="s2">"├── "</span> <span class="o">+</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">is_file</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'.'</span><span class="p">)]</span>
+    
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">contents</span><span class="p">):</span>
+        <span class="n">is_last</span> <span class="o">=</span> <span class="n">index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">branch</span> <span class="o">=</span> <span class="s2">"└── "</span> <span class="k">if</span> <span class="n">is_last</span> <span class="k">else</span> <span class="s2">"├── "</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="n">branch</span> <span class="o">+</span> <span class="n">item</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        
         <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
-            <span class="n">print_tree</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s2">"│   "</span><span class="p">)</span>
+            <span class="n">extension</span> <span class="o">=</span> <span class="s2">"    "</span> <span class="k">if</span> <span class="n">is_last</span> <span class="k">else</span> <span class="s2">"│   "</span>
+            <span class="n">print_tree</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">+</span> <span class="n">extension</span><span class="p">)</span>
 
-<span class="c1"># Project root and folder structure</span>
+<span class="c1"># Move one level up to project root</span>
+<span class="n">project_root</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">".."</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
 
-<span class="n">project_root</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"."</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">project_root</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">"/"</span><span class="p">)</span>
 <span class="n">print_tree</span><span class="p">(</span><span class="n">project_root</span><span class="p">)</span>
 </pre></div>
@@ -7612,19 +7620,21 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>/
+<pre>ml-latest-small/
 ├── data
-│   ├── raw
-│   │   ├── movies.csv
-│   │   ├── ratings.csv
-│   │   ├── tags.csv
+│   └── raw
+│       ├── links.csv
+│       ├── movies.csv
+│       ├── ratings.csv
+│       └── tags.csv
 ├── notebooks
+│   └── Newton_Capstone_Recommendation System.ipynb
 ├── reports
-├── links.csv
-├── movie_recommender_cli.py
-├── Newton_Capstone_Recommendation System.ipynb
-├── README.txt
-├── Untitled.ipynb
+│   ├── Newton_Capstone_Recommendation System HTML.html
+│   └── Newton_Capstone_Recommendation System PDF.pdf
+├── src
+│   └── movie_recommender_cli.py
+└── README.md
 </pre>
 </div>
 </div>
