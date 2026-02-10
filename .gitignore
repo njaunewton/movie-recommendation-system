@@ -1,25 +1,42 @@
-Python cache
-
-pycache/
+# Python Cache
+__pycache__/
 *.pyc
 *.pyo
+*.pyd
+*.py[cod]
 
-Jupyter Notebook checkpoints
-
+# Jupyter Notebook
 .ipynb_checkpoints/
 
-Virtual environments
-
+# Virtual Environments
 venv/
 env/
+ENV/
+.venv/
 
-System files
+# R Files
+.Rhistory
+.RData
+.Rproj.user/
 
+# IDE / Editor Files
+.vscode/
+.idea/
+
+# System Files
 .DS_Store
 Thumbs.db
 
-Large data backups (if any later)
-
+# Large Archives / Backups
 *.zip
 *.tar
 *.gz
+*.7z
+*.rar
+
+# Logs
+*.log
+
+# Temporary Files
+*.tmp
+*.bak
